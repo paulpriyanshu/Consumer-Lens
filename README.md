@@ -21,7 +21,7 @@ To get started with this project, follow these steps:
 1. **Clone the repository:**
 
     ```bash
-      https://github.com/paulpriyanshu/amazon-dashb.git
+    https://github.com/paulpriyanshu/amazon-dashb.git
     ```
 
 2. **Navigate to the project directory:**
