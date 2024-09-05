@@ -8,7 +8,10 @@ const page = () => {
       <Sidebar />
       <div className="flex-1">
         <TopBar />
-        <OrdersTable />
+        <h1 className='flex justify-center items-center text-3xl font-bold font-sans'>
+            Live Orders
+        </h1>
+        <OrdersTable/>
 
       </div>
     </div>

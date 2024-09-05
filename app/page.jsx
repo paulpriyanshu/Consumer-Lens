@@ -6,8 +6,17 @@ import AnalyticsCard from './components/AnalyticsCard';
 import { useEffect, useState } from 'react';
 import SalesCard from './components/SalesCard';
 import LineChartComponent from './components/LineChartComponent';
+import SplashScreen from './components/SplashScreen';
 
 const HomePage = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 1000); // Adjust the duration as needed
+
+    return () => clearTimeout(timer);
+  }, []);
   const [sessions,setSessions]=useState("")
   const [trend,setTrend]=useState("")
   const [sales,setSales]=useState("")
@@ -39,12 +48,12 @@ const HomePage = () => {
   ]
   useEffect(()=>{
     // storeinfo()
-    const myTimeout = setTimeout(storeinfo, 2000);
+    const myTimeout = setTimeout(storeinfo, 3000);
     // clearTimeout(myTimeout);
 
   },[sessions])
-  return (
-    <div className="flex">
+  return (<div>{
+      !isLoaded ? <SplashScreen/> : <div className="flex">
       <Sidebar />
       <div className="flex-1">
         <TopBar />
@@ -75,6 +84,8 @@ const HomePage = () => {
       </div>
      
     </div>
+    }</div>
+    
   );
 };
 

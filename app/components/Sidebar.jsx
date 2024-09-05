@@ -2,6 +2,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
+import Dropdown from "./Dropdown";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -19,9 +20,9 @@ const Sidebar = () => {
             </h1>
           </button>
         </li>
-        <li className="py-2  ">
-          <button  className="rounded-xl" onClick={() => router.push('/')} >
-            <h1 className="text-2xl font-sans font-bold p-2 px-5 ">
+        <li className="py-2">
+          <button  className="rounded-xl" onClick={() => router.push('/flaggedusers')} >
+            <h1 className="text-2xl font-sans  font-bold p-2 px-5 ">
                 Users
             </h1>
           </button>
@@ -35,23 +36,23 @@ const Sidebar = () => {
           </button>
         </li>
         <li className="py-2 ">
-          <button className="rounded-xl" onClick={() => console.log("hello")}>
+          <button className="rounded-xl" onClick={() => router.push('/products')}>
            
             <h1 className="text-2xl font-sans font-bold p-2 px-5">
             Product
             </h1>
           </button>
         </li>
-        <li className="py-2 ">
-          <button className="rounded-xl" onClick={() => console.log("hello")}>
+        {/* <li className="py-2 ">
+          <button className="rounded-xl" onClick={() => router.push('/customers')}>
           <h1 className="text-2xl font-sans font-bold p-2 px-5">
           Customers
             </h1>
           
           </button>
-        </li>
+        </li> */}
         <li className="py-2 ">
-          <button  className="rounded-xl" onClick={() => console.log("hello")}>
+          <button  className="rounded-xl" onClick={() => router.push('/analytics')}>
           <h1 className="text-2xl font-sans font-bold p-2 px-5">
           Analytic
         </h1>
@@ -59,7 +60,7 @@ const Sidebar = () => {
           </button>
         </li>
         <li className="py-2 ">
-          <button className="rounded-xl" onClick={() => console.log("hello")}>
+          <button className="rounded-xl" onClick={() => router.push('/marketing')}>
           <h1 className="text-2xl font-sans font-bold p-2 px-5">
           Marketing
             </h1>
@@ -67,23 +68,7 @@ const Sidebar = () => {
           </button>
         </li>
         <li className="py-2 ">
-          <button className="rounded-xl" onClick={() => console.log("hello")}>
-          <h1 className="text-2xl font-sans font-bold p-2 px-5">
-          Discount
-            </h1>
-           
-          </button>
-        </li>
-        <li className="py-2 ">
-          <button className="rounded-xl" onClick={() => console.log("hello")}>
-           
-            <h1 className="text-2xl font-sans font-bold p-2 px-5">
-            App
-            </h1>
-          </button>
-        </li>
-        <li className="py-2 ">
-          <button className="rounded-xl" onClick={() => console.log("hello")}>
+          <button className="rounded-xl" onClick={() => router.push('/settings')}>
           <h1 className="text-2xl font-sans font-bold p-2 px-5">
           Settings
         </h1>

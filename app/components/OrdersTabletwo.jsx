@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import {indianNames} from '../api/actions/names'
 
- const OrdersTable = () => {
+ const OrdersTabletwo = () => {
   // Initial list of orders
 
   const [orders, setOrders] = useState([
@@ -85,8 +85,8 @@ import {indianNames} from '../api/actions/names'
 
   useEffect(() => {
     // Insert orders more frequently than canceling them
-    const insertInterval = setInterval(insertRandomOrder, 500); // Insert every 2 seconds
-    const cancelInterval = setInterval(cancelRandomOrder, 6000); // Cancel every 6 seconds
+    const insertInterval = setInterval(insertRandomOrder, 50); // Insert every 2 seconds
+    const cancelInterval = setInterval(cancelRandomOrder, 1000); // Cancel every 6 seconds
 
     // Cleanup intervals on component unmount
     return () => {
@@ -136,4 +136,4 @@ import {indianNames} from '../api/actions/names'
 };
 
 
-export default OrdersTable
+export default OrdersTabletwo
