@@ -1,17 +1,98 @@
 // components/Sidebar.js
+"use client";
+import React from "react";
+import { useRouter } from "next/navigation";
+
 const Sidebar = () => {
-    return (
-      <div className="w-1/5 h-screen bg-gray-100 p-4">
-        <ul>
-          <li className="mb-4 text-gray-600">Home</li>
-          <li className="mb-4 text-gray-600">Orders</li>
-          <li className="mb-4 text-gray-600">Products</li>
-          <li className="mb-4 text-gray-600">Customers</li>
-          <li className="mb-4 text-gray-600">Marketing</li>
-        </ul>
-      </div>
-    );
-  };
-  
-  export default Sidebar;
-  
+  const router = useRouter();
+
+  return (
+    <div className="sidebar bg-gray-100 p-4 w-1/6">
+      <ul className="flex flex-col justify-center ">
+        <h1>
+            CustomerLens
+        </h1>
+        <li className="py-2  ">
+          <button  className="rounded-xl" onClick={() => router.push('/')} >
+            <h1 className="text-2xl font-sans font-bold p-2 px-5 ">
+                Home
+            </h1>
+          </button>
+        </li>
+        <li className="py-2  ">
+          <button  className="rounded-xl" onClick={() => router.push('/')} >
+            <h1 className="text-2xl font-sans font-bold p-2 px-5 ">
+                Users
+            </h1>
+          </button>
+        </li>
+        <li className="py-2 ">
+          <button className="rounded-xl" onClick={() => router.push('/order')}>
+           
+            <h1 className="text-2xl font-sans font-bold p-2 px-5">
+            Orders
+            </h1>
+          </button>
+        </li>
+        <li className="py-2 ">
+          <button className="rounded-xl" onClick={() => console.log("hello")}>
+           
+            <h1 className="text-2xl font-sans font-bold p-2 px-5">
+            Product
+            </h1>
+          </button>
+        </li>
+        <li className="py-2 ">
+          <button className="rounded-xl" onClick={() => console.log("hello")}>
+          <h1 className="text-2xl font-sans font-bold p-2 px-5">
+          Customers
+            </h1>
+          
+          </button>
+        </li>
+        <li className="py-2 ">
+          <button  className="rounded-xl" onClick={() => console.log("hello")}>
+          <h1 className="text-2xl font-sans font-bold p-2 px-5">
+          Analytic
+        </h1>
+            
+          </button>
+        </li>
+        <li className="py-2 ">
+          <button className="rounded-xl" onClick={() => console.log("hello")}>
+          <h1 className="text-2xl font-sans font-bold p-2 px-5">
+          Marketing
+            </h1>
+            
+          </button>
+        </li>
+        <li className="py-2 ">
+          <button className="rounded-xl" onClick={() => console.log("hello")}>
+          <h1 className="text-2xl font-sans font-bold p-2 px-5">
+          Discount
+            </h1>
+           
+          </button>
+        </li>
+        <li className="py-2 ">
+          <button className="rounded-xl" onClick={() => console.log("hello")}>
+           
+            <h1 className="text-2xl font-sans font-bold p-2 px-5">
+            App
+            </h1>
+          </button>
+        </li>
+        <li className="py-2 ">
+          <button className="rounded-xl" onClick={() => console.log("hello")}>
+          <h1 className="text-2xl font-sans font-bold p-2 px-5">
+          Settings
+        </h1>
+           
+          </button>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Sidebar;

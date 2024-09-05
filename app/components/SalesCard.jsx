@@ -1,15 +1,16 @@
 // components/AnalyticsCard.js
+"use client"
 import { useEffect, useState } from 'react';
 
-const SalesCard = ({ title, value, trend }) => {
-  const [prevValue, setPrevValue] = useState(value);
+const SalesCard = ({ title, sales, trend }) => {
+  const [prevSales, setPrevSales] = useState(sales);
 
   useEffect(() => {
-    // Update the previous value when the current value changes
-    if (value !== prevValue) {
-      setPrevValue(value);
+    // Update the previous sales when the current sales changes
+    if (sales !== prevSales) {
+      setPrevSales(sales);
     }
-  }, [value]);
+  }, [sales]);
 
   return (
     <div className="w-full md:w-1/3 lg:w-1/4 xl:w-11/12 h:full p-4">
@@ -18,7 +19,7 @@ const SalesCard = ({ title, value, trend }) => {
         
         {/* Apply transition class for smooth number changes */}
         <p className={`text-5xl font-semibold value-transition`}>
-          {value}
+          {sales}
         </p>
         
         <p className={`text-2xl ${trend >= 0 ? 'text-green-500' : 'text-red-500'}`}>

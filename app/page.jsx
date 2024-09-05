@@ -14,7 +14,7 @@ const HomePage = () => {
     return Math.floor(Math.random() * max);
   }
   
-  console.log(getRandomInt(3));
+  // console.log(getRandomInt(3));
   const storeinfo=()=>{
 
     setSessions(getRandomInt(9999))
@@ -35,11 +35,11 @@ const HomePage = () => {
     // { title: 'Orders attributed to marketing', value: '0', trend: 100 },
   ];
   const salesData=[
-     { title: 'Total sales', sales: sales, trend: 0 }
+     { title: 'Total sales', sales: sales, trend: trend }
   ]
   useEffect(()=>{
     // storeinfo()
-    const myTimeout = setTimeout(storeinfo, 2500);
+    const myTimeout = setTimeout(storeinfo, 2000);
     // clearTimeout(myTimeout);
 
   },[sessions])
@@ -54,14 +54,15 @@ const HomePage = () => {
               key={index}
               title={item.title}
               value={item.value}
-              // sales={item.sales}
               trend={item.trend}
             />
           ))}
           {salesData.map((item,index)=>(
             <SalesCard
             key={index}
-            title={}
+            title={item.title}
+            sales={item.sales}
+            trend={item.trend}
             />
           ))}
         </div>

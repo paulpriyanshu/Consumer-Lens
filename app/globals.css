@@ -2,3 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+.table-header th,
+.table-body td {
+  /* Consistent column width */
+  width: 150px; /* Adjust width as needed */
+}
+
+/* Optional: Specific column widths */
+.table-header th:nth-child(1),
+.table-body td:nth-child(1) {
+  width: 220px;
+}
+
+.table-header th:nth-child(2),
+.table-body td:nth-child(2) {
+  width: 100px;
+}
+.table-wrapper {
+    height: 50vh; /* Set height to 50% of viewport height */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide any overflow to avoid content going outside */
+  }
+  
+  
+  .table-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1; /* Ensure it sits above the table body content */
+  }
+  
+  .table-container {
+    flex: 1; /* Take up the remaining space */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  table {
+    width: 100%; /* Ensure the table takes up full width */
+    border-collapse: collapse; /* Ensures borders and spacing are consistent */
+  }
+  
+  th, td {
+    padding: 8px; /* Adjust as needed */
+    border: 1px solid #ddd; /* Add border for clarity */
+  }
+  /* Add this to your global CSS or component-specific CSS file */
+.sidebar {
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Scroll if content overflows */
+  }
+  
+  .sidebar ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove list bullet points */
+  }
+  
+  .sidebar li {
+    padding: 8px 0; /* Add padding for better spacing */
+  }
+  
+  .sidebar button {
+    width: 100%; /* Make button take full width of the sidebar */
+    text-align: left; /* Align text to the left */
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer */
+    padding: 8px; /* Add padding for better touch targets */
+    font-size: 16px; /* Adjust font size */
+  }
+  
+  .sidebar button:hover {
+    background-color: #e2e8f0; /* Add a hover effect */
+  }
+  
+  

@@ -1,4 +1,5 @@
 // components/AnalyticsCard.js
+"use client"
 import { useEffect, useState } from 'react';
 
 const AnalyticsCard = ({ title, value, trend }) => {
