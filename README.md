@@ -2,9 +2,9 @@ Here's a sample GitHub README for your Next.js project based on the provided `pa
 
 ---
 
-# Amazon Dashb
+# Consumer Lens
 
-Amazon Dashb is a Next.js application designed for a dashboard experience. This project showcases the integration of modern UI libraries and tools, providing an efficient and dynamic user interface.
+Consumer Lens is a Next.js application designed for enhancing  customer interaction managment at Amazon. This project showcases the integration of modern UI libraries and tools, providing an efficient and dynamic user interface.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ To get started with this project, follow these steps:
 1. **Clone the repository:**
 
     ```bash
-  https://github.com/paulpriyanshu/amazon-dashb.git
+      https://github.com/paulpriyanshu/amazon-dashb.git
     ```
 
 2. **Navigate to the project directory:**
