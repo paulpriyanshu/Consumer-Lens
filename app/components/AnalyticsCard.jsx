@@ -14,7 +14,7 @@ const AnalyticsCard = ({ title, value, trend }) => {
 
   return (
     <div className="w-full md:w-1/3 lg:w-1/4 xl:w-11/12 h:full p-4">
-      <div className="shadow-sm p-6 rounded-lg bg-slate-300 py-20">
+      <div className="shadow-sm p-6 rounded-lg bg-slate-100 py-20">
         <h3 className="text-gray-500 text-3xl">{title}</h3>
         
         {/* Apply transition class for smooth number changes */}

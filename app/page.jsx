@@ -5,22 +5,22 @@ import TopBar from './components/TopBar';
 import AnalyticsCard from './components/AnalyticsCard';
 import { useEffect, useState } from 'react';
 import SalesCard from './components/SalesCard';
+import LineChartComponent from './components/LineChartComponent';
 
 const HomePage = () => {
   const [sessions,setSessions]=useState("")
   const [trend,setTrend]=useState("")
   const [sales,setSales]=useState("")
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
+  function getRandomInt(min,max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
   
   // console.log(getRandomInt(3));
   const storeinfo=()=>{
 
-    setSessions(getRandomInt(9999))
-    setTrend(getRandomInt(99))
-    setSales(getRandomInt(99999))
-    
+    setSessions(getRandomInt(5000, 9999));
+    setTrend(getRandomInt(50, 99));
+    setSales(getRandomInt(80000, 99999));
     
 
   }
@@ -64,9 +64,16 @@ const HomePage = () => {
             sales={item.sales}
             trend={item.trend}
             />
+
           ))}
+         
+          
+        </div>
+        <div>
+        <LineChartComponent/>
         </div>
       </div>
+     
     </div>
   );
 };

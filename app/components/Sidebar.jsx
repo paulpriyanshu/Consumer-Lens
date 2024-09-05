@@ -9,8 +9,8 @@ const Sidebar = () => {
   return (
     <div className="sidebar bg-gray-100 p-4 w-1/6">
       <ul className="flex flex-col justify-center ">
-        <h1>
-            CustomerLens
+        <h1 className="flex justify-center border border-b-slate-100 w-full hover:cursor-pointer">
+            <img src='logo.png' width={150} height={100} onClick={()=>router.push('/')} />
         </h1>
         <li className="py-2  ">
           <button  className="rounded-xl" onClick={() => router.push('/')} >
