@@ -48,7 +48,7 @@ const HomePage = () => {
   ]
   useEffect(()=>{
     // storeinfo()
-    const myTimeout = setTimeout(storeinfo, 3000);
+    const myTimeout = setTimeout(storeinfo, 2000);
     // clearTimeout(myTimeout);
 
   },[sessions])

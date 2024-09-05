@@ -7,7 +7,7 @@
 /* SplashScreen.css */
 
 .animate-grow {
-    animation: grow 5s ease-in-out forwards;
+    animation: grow 3s ease-in-out forwards;
   }
   
   @keyframes grow {
