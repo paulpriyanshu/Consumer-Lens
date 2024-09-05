@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
+import {indianNames} from '../api/actions/names'
 
 const OrdersTable = () => {
   // Initial list of orders
+
   const [orders, setOrders] = useState([
     {
       id: "SL/1014/24-25",
@@ -18,14 +20,7 @@ const OrdersTable = () => {
   ]);
 
   // Array of Indian names
-  const indianNames = [
-    "Aarav", "Aditi", "Advait", "Akash", "Ananya", "Arjun", "Ashwini", "Bhavya",
-    "Chaitanya", "Deeksha", "Dhruv", "Divya", "Esha", "Gautam", "Harsha", "Isha",
-    "Jaya", "Kabir", "Kavya", "Lakshmi", "Madhav", "Meera", "Neha", "Nikhil",
-    "Omkar", "Parvati", "Pooja", "Rajesh", "Rakesh", "Riya", "Rohit", "Sakshi",
-    "Sanjay", "Saraswati", "Shivam", "Shruti", "Soham", "Sudha", "Swati", "Tarun",
-    "Tejas", "Uday", "Vaibhav", "Vani", "Varun", "Vikram", "Vinay", "Yash", "Yogesh", "Zara"
-  ];
+ 
 
   // Function to generate a random order
   function generateRandomOrder() {
